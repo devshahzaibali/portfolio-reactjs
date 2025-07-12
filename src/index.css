@@ -1,0 +1,462 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for the entire page */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Dark mode scrollbar */
+
+.dark ::-webkit-scrollbar-track {
+    background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #6b7280;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+
+/* Custom animations */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+/* Animation classes */
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+.animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+
+/* Responsive text utilities */
+
+.text-responsive-xs {
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+
+.text-responsive-sm {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.text-responsive-base {
+    font-size: clamp(1rem, 3vw, 1.125rem);
+}
+
+.text-responsive-lg {
+    font-size: clamp(1.125rem, 3.5vw, 1.25rem);
+}
+
+.text-responsive-xl {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+}
+
+.text-responsive-2xl {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.text-responsive-3xl {
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.text-responsive-4xl {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+}
+
+.text-responsive-5xl {
+    font-size: clamp(3rem, 8vw, 5rem);
+}
+
+.text-responsive-6xl {
+    font-size: clamp(3.5rem, 9vw, 6rem);
+}
+
+
+/* Responsive spacing utilities */
+
+.space-responsive-xs {
+    gap: clamp(0.25rem, 1vw, 0.5rem);
+}
+
+.space-responsive-sm {
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.space-responsive-md {
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.space-responsive-lg {
+    gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.space-responsive-xl {
+    gap: clamp(2rem, 4vw, 3rem);
+}
+
+
+/* Responsive padding utilities */
+
+.p-responsive-xs {
+    padding: clamp(0.25rem, 1vw, 0.5rem);
+}
+
+.p-responsive-sm {
+    padding: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.p-responsive-md {
+    padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.p-responsive-lg {
+    padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.p-responsive-xl {
+    padding: clamp(2rem, 4vw, 3rem);
+}
+
+
+/* Responsive margin utilities */
+
+.m-responsive-xs {
+    margin: clamp(0.25rem, 1vw, 0.5rem);
+}
+
+.m-responsive-sm {
+    margin: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.m-responsive-md {
+    margin: clamp(1rem, 2vw, 1.5rem);
+}
+
+.m-responsive-lg {
+    margin: clamp(1.5rem, 3vw, 2rem);
+}
+
+.m-responsive-xl {
+    margin: clamp(2rem, 4vw, 3rem);
+}
+
+
+/* Container utilities */
+
+.container-responsive {
+    width: 100%;
+    max-width: clamp(320px, 95vw, 1200px);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+
+/* Grid utilities */
+
+.grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 30vw, 400px), 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+
+/* Flex utilities */
+
+.flex-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+
+/* Shadow utilities */
+
+.shadow-responsive {
+    box-shadow: 0 clamp(4px, 1vw, 10px) clamp(6px, 1.5vw, 15px) -3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Glassmorphism effect */
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Gradient text utilities */
+
+.gradient-text-blue {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-purple {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-green {
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* Hover effects */
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Focus styles for accessibility */
+
+.focus-ring {
+    outline: none;
+}
+
+.focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.dark .focus-ring:focus {
+    box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+
+/* Loading animation */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin 3s linear infinite;
+}
+
+
+/* Bounce animation */
+
+@keyframes bounce {
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce 2s infinite;
+}
+
+
+/* Shake animation */
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.animate-shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+
+/* Typing animation */
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.animate-typing {
+    animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+}
+
+
+/* Floating animation */
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+
+/* Glow effect */
+
+.glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.glow:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+}
+
+
+/* Gradient backgrounds */
+
+.bg-gradient-radial {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+}
+
+.bg-gradient-conic {
+    background: conic-gradient(from 0deg, var(--tw-gradient-stops));
+}
+
+
+/* Custom utilities for better responsive design */
+
+@media (max-width: 475px) {
+    .container-responsive {
+        padding: 0 1rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container-responsive {
+        max-width: 1400px;
+    }
+}
+
+
+/* Print styles */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    .print-break {
+        page-break-before: always;
+    }
+}

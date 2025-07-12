@@ -1,0 +1,38 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0ea5e9"/>
+  
+  <!-- Weather card -->
+  <rect x="50" y="50" width="300" height="200" rx="16" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="50" y="50" width="300" height="60" rx="16" fill="#0ea5e9"/>
+  <text x="200" y="85" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Weather Widget</text>
+  
+  <!-- Weather icon -->
+  <circle cx="200" cy="140" r="30" fill="#fbbf24"/>
+  <circle cx="200" cy="140" r="25" fill="#fef3c7"/>
+  
+  <!-- Sun rays -->
+  <line x1="160" y1="110" x2="150" y2="100" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="240" y1="110" x2="250" y2="100" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="160" y1="170" x2="150" y2="180" stroke="#fbbf24" stroke-width="3"/>
+  <line x1="240" y1="170" x2="250" y2="180" stroke="#fbbf24" stroke-width="3"/>
+  
+  <!-- Temperature -->
+  <text x="200" y="190" fill="#1f2937" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle">24°C</text>
+  
+  <!-- Weather condition -->
+  <text x="200" y="210" fill="#6b7280" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Sunny</text>
+  
+  <!-- Weather details -->
+  <rect x="70" y="220" width="120" height="20" rx="4" fill="#f3f4f6"/>
+  <text x="130" y="235" fill="#374151" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Humidity: 65%</text>
+  
+  <rect x="210" y="220" width="120" height="20" rx="4" fill="#f3f4f6"/>
+  <text x="270" y="235" fill="#374151" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Wind: 12 km/h</text>
+  
+  <!-- Update button -->
+  <rect x="150" y="250" width="100" height="30" rx="15" fill="#3b82f6"/>
+  <text x="200" y="270" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Update</text>
+</svg> 

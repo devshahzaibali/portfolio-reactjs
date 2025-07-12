@@ -1,0 +1,28 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="60" fill="#3b82f6"/>
+  <text x="20" y="35" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Todo App</text>
+  
+  <!-- Input area -->
+  <rect x="20" y="80" width="360" height="50" rx="8" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="35" y="110" fill="#64748b" font-family="Arial, sans-serif" font-size="14">Add new task...</text>
+  <rect x="320" y="85" width="50" height="40" rx="6" fill="#3b82f6"/>
+  <text x="335" y="110" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Add</text>
+  
+  <!-- Todo items -->
+  <rect x="20" y="150" width="360" height="40" rx="6" fill="#f1f5f9"/>
+  <circle cx="40" cy="170" r="8" fill="#10b981" stroke="#10b981"/>
+  <path d="M35 170 L38 173 L45 166" stroke="white" stroke-width="2" fill="none"/>
+  <text x="60" y="175" fill="#475569" font-family="Arial, sans-serif" font-size="14" text-decoration="line-through">Build amazing portfolio</text>
+  
+  <rect x="20" y="200" width="360" height="40" rx="6" fill="white"/>
+  <circle cx="40" cy="220" r="8" fill="white" stroke="#d1d5db"/>
+  <text x="60" y="225" fill="#1f2937" font-family="Arial, sans-serif" font-size="14">Learn new technologies</text>
+  
+  <rect x="20" y="250" width="360" height="40" rx="6" fill="white"/>
+  <circle cx="40" cy="270" r="8" fill="white" stroke="#d1d5db"/>
+  <text x="60" y="275" fill="#1f2937" font-family="Arial, sans-serif" font-size="14">Create innovative projects</text>
+</svg> 
