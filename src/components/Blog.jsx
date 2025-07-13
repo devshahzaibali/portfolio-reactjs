@@ -96,7 +96,7 @@ const Blog = () => {
 
         {/* Blog Posts */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -115,14 +115,14 @@ const Blog = () => {
               onHoverEnd={() => setHoveredPost(null)}
             >
               {/* Post image/icon */}
-              <div className={`h-40 bg-gradient-to-r ${post.color} flex items-center justify-center text-6xl text-white`}>
+              <div className={`h-32 sm:h-40 bg-gradient-to-r ${post.color} flex items-center justify-center text-4xl sm:text-6xl text-white`}>
                 {post.image}
               </div>
 
               {/* Post content */}
-              <div className="p-6 sm:p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full font-medium">
+              <div className="p-4 sm:p-6 lg:p-8">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <span className="px-2 sm:px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full font-medium">
                     {post.category}
                   </span>
                   <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -130,21 +130,21 @@ const Blog = () => {
                   </span>
                 </div>
                 
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {post.title}
                 </h3>
                 
-                <p className="text-gray-600 dark:text-gray-300 mb-5">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-5">
                   {post.excerpt}
                 </p>
                 
                 {/* Tags */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
+                <div className="mb-4 sm:mb-6">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {post.tags.map((tag) => (
                       <span 
                         key={tag}
-                        className="px-3 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full"
+                        className="px-2 sm:px-3 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full"
                       >
                         #{tag}
                       </span>
@@ -154,12 +154,12 @@ const Blog = () => {
 
                 {/* Read More button */}
                 <motion.button
-                  className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200"
+                  className="flex items-center gap-1.5 sm:gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200 text-sm sm:text-base"
                   whileHover={{ x: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Read full article
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </motion.button>

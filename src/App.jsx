@@ -10,9 +10,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App w-full">
+    <div className="App w-full min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
       <Navbar />
-      <main className="w-full">
+      <main className="w-full relative">
         <Home />
         <Skills />
         <Projects />

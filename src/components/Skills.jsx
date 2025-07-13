@@ -77,7 +77,7 @@ const Skills = () => {
 
         {/* Skills Grid */}
         <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 xl:gap-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -86,7 +86,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <motion.div 
               key={skill.name}
-              className="group relative bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600"
+              className="group relative bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600"
               variants={itemVariants}
               whileHover={{ 
                 y: -10,
@@ -100,9 +100,9 @@ const Skills = () => {
               </div>
               
               <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-4xl">{skill.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="text-3xl sm:text-4xl">{skill.icon}</div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {skill.name}
                   </h3>
                 </div>
@@ -112,9 +112,9 @@ const Skills = () => {
                   <span className="text-sm font-bold text-blue-600 dark:text-blue-400">{skill.level}%</span>
                 </div>
                 
-                <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2.5 overflow-hidden">
+                <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 sm:h-2.5 overflow-hidden">
                   <motion.div 
-                    className={`h-2.5 rounded-full bg-gradient-to-r ${skill.color}`}
+                    className={`h-2 sm:h-2.5 rounded-full bg-gradient-to-r ${skill.color}`}
                     variants={progressVariants}
                     custom={skill.level}
                     initial="hidden"
@@ -123,7 +123,7 @@ const Skills = () => {
                   />
                 </div>
                 
-                <div className="mt-6 flex justify-between">
+                <div className="mt-4 sm:mt-6 flex justify-between">
                   <span className="text-xs text-gray-500 dark:text-gray-400">Beginner</span>
                   <span className="text-xs text-gray-500 dark:text-gray-400">Expert</span>
                 </div>
