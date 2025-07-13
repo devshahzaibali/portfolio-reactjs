@@ -115,11 +115,23 @@ export default function Navbar() {
                 tabIndex={0}
                 aria-label="Go to home section"
               >
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden mr-2 md:mr-3 border-2 border-blue-500 group-hover:border-purple-500 transition-colors duration-300 shadow-lg flex-shrink-0">
-                  <img src="/profile.jpg" alt="Shahzaibali - Web Developer" className="w-full h-full object-cover" />
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden mr-2 md:mr-3 border-2 border-blue-500 group-hover:border-purple-500 transition-colors duration-300 shadow-lg flex-shrink-0 bg-gradient-to-r from-blue-500 to-purple-600">
+                  <img 
+                    src="/profile.jpg" 
+                    alt="Shahzaib Ali - Full Stack Developer" 
+                    className="w-full h-full object-cover" 
+                    loading="eager"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full flex items-center justify-center text-white font-bold text-xs md:text-sm" style={{ display: 'none' }}>
+                    SA
+                  </div>
                 </div>
                 <h1 className="text-lg md:text-xl lg:text-2xl font-bold bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-transparent group-hover:from-purple-600 group-hover:via-pink-600 group-hover:to-blue-600 transition-all duration-300 truncate">
-                  Shahzaibali
+                  Shahzaib Ali
                 </h1>
               </a>
             </div>
@@ -153,6 +165,54 @@ export default function Navbar() {
                   </a>
                 ))}
               </nav>
+              
+              {/* Desktop Dark Mode Toggle */}
+              <motion.button
+                onClick={toggleDarkMode}
+                className="relative p-2.5 rounded-xl bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 hover:from-blue-100 hover:via-purple-100 hover:to-pink-100 dark:hover:from-blue-800 dark:hover:via-purple-800 dark:hover:to-pink-800 transition-all duration-500 shadow-lg border-2 border-gray-200/50 dark:border-gray-600/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 flex-shrink-0 overflow-hidden group"
+                aria-label="Toggle dark mode"
+                tabIndex={0}
+                whileHover={{ scale: 1.05, rotate: -5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {/* Animated background */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                />
+                
+                {/* Toggle switch container */}
+                <div className="relative w-5 h-5 flex items-center justify-center">
+                  {/* Sun icon - shown in dark mode to switch to light */}
+                  <motion.svg
+                    className="absolute w-4 h-4 text-yellow-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    animate={isDark ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0, rotate: 90 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                  </motion.svg>
+                  
+                  {/* Moon icon - shown in light mode to switch to dark */}
+                  <motion.svg
+                    className="absolute w-4 h-4 text-blue-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    animate={isDark ? { opacity: 0, scale: 0, rotate: -90 } : { opacity: 1, scale: 1, rotate: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                  </motion.svg>
+                </div>
+                
+                {/* Glow effect */}
+                <motion.div
+                  className="absolute inset-0 rounded-xl bg-gradient-to-r from-yellow-400/20 to-blue-400/20"
+                  animate={isDark ? { opacity: 0.3 } : { opacity: 0.1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.button>
+              
               <button
                 className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white px-6 py-2.5 rounded-xl text-sm font-medium shadow-lg transition-all duration-300 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 whitespace-nowrap"
                 onClick={() => handleNavClick('Contact', '#contact')}
@@ -182,23 +242,23 @@ export default function Navbar() {
                 
                 {/* Toggle switch container */}
                 <div className="relative w-6 h-6 flex items-center justify-center">
-                  {/* Sun icon */}
+                  {/* Sun icon - shown in dark mode to switch to light */}
                   <motion.svg
                     className="absolute w-5 h-5 text-yellow-500"
                     fill="currentColor"
                     viewBox="0 0 20 20"
-                    animate={isDark ? { opacity: 0, scale: 0, rotate: -90 } : { opacity: 1, scale: 1, rotate: 0 }}
+                    animate={isDark ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0, rotate: 90 }}
                     transition={{ duration: 0.3 }}
                   >
                     <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
                   </motion.svg>
                   
-                  {/* Moon icon */}
+                  {/* Moon icon - shown in light mode to switch to dark */}
                   <motion.svg
                     className="absolute w-5 h-5 text-blue-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
-                    animate={isDark ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0, rotate: 90 }}
+                    animate={isDark ? { opacity: 0, scale: 0, rotate: -90 } : { opacity: 1, scale: 1, rotate: 0 }}
                     transition={{ duration: 0.3 }}
                   >
                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />

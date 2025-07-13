@@ -55,7 +55,7 @@ const Home = () => {
     try {
       const link = document.createElement('a');
       link.href = '/resume.pdf';
-      link.download = 'Shahzaibali_Resume.pdf';
+      link.download = 'Shahzaib_Ali_Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

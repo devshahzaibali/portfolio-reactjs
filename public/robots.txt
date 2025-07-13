@@ -5,4 +5,34 @@ Allow: /
 Sitemap: https://shahzaibali.online/sitemap.xml
 
 # Crawl-delay
-Crawl-delay: 1 
+Crawl-delay: 1
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all assets
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: / 

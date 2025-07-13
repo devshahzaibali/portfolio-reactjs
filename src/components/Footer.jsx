@@ -103,12 +103,12 @@ const Footer = () => {
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden mr-3 sm:mr-4 border-2 border-blue-500">
                   <img 
                     src="/profile.jpg" 
-                    alt="Shahzaibali" 
+                    alt="Shahzaib Ali" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold text-white bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 text-transparent">
-                  Shahzaibali
+                  Shahzaib Ali
                 </h3>
               </div>
               <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-md leading-relaxed">
@@ -279,7 +279,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400 text-center md:text-left">
-              © {new Date().getFullYear()} Shahzaibali. All rights reserved.
+              © {new Date().getFullYear()} Shahzaib Ali. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
               <motion.a 

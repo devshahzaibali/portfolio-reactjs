@@ -3,40 +3,67 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <!-- Primary Meta Tags -->
-    <title>ShahZaib Ali - Full Stack Developer & Creative Coder | React, Node.js, Next.js</title>
-    <meta name="title" content="ShahZaib Ali - Full Stack Developer & Creative Coder | React, Node.js, Next.js" />
-    <meta name="description" content="Professional Full Stack Developer specializing in React, Node.js, Next.js, and modern web technologies. Creating beautiful, responsive, and performant web applications." />
-    <meta name="keywords" content="Full Stack Developer, React Developer, Node.js Developer, Next.js Developer, Web Developer, JavaScript Developer, Frontend Developer, Backend Developer" />
-    <meta name="author" content="ShahZaib Ali" />
-    <meta name="robots" content="index, follow" />
+    <title>Shahzaib Ali - Full Stack Developer & Creative Coder | React, Node.js, Next.js</title>
+    <meta name="title" content="Shahzaib Ali - Full Stack Developer & Creative Coder | React, Node.js, Next.js" />
+    <meta name="description" content="Shahzaib Ali is a professional Full Stack Developer specializing in React, Node.js, Next.js, and modern web technologies. Creating beautiful, responsive, and performant web applications with 3+ years of experience." />
+    <meta name="keywords" content="Shahzaib Ali, Full Stack Developer, React Developer, Node.js Developer, Next.js Developer, Web Developer, JavaScript Developer, Frontend Developer, Backend Developer, Portfolio, Shahzaib Ali Portfolio" />
+    <meta name="author" content="Shahzaib Ali" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Performance & Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Shahzaib Ali" />
+    <meta name="application-name" content="Shahzaib Ali Portfolio" />
+
+    <!-- Theme & Colors -->
+    <meta name="theme-color" content="#3B82F6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1F2937" media="(prefers-color-scheme: dark)" />
+    <meta name="msapplication-TileColor" content="#3B82F6" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://shahzaibali.online/" />
-    <meta property="og:title" content="ShahZaib Ali - Full Stack Developer & Creative Coder" />
-    <meta property="og:description" content="Professional Full Stack Developer specializing in React, Node.js, Next.js, and modern web technologies. Creating beautiful, responsive, and performant web applications." />
+    <meta property="og:title" content="Shahzaib Ali - Full Stack Developer & Creative Coder" />
+    <meta property="og:description" content="Shahzaib Ali is a professional Full Stack Developer specializing in React, Node.js, Next.js, and modern web technologies. Creating beautiful, responsive, and performant web applications." />
     <meta property="og:image" content="https://shahzaibali.online/profile.jpg" />
-    <meta property="og:site_name" content="ShahZaib Ali Portfolio" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:image:alt" content="Shahzaib Ali - Full Stack Developer Profile Picture" />
+    <meta property="og:site_name" content="Shahzaib Ali Portfolio" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://shahzaibali.online/" />
-    <meta property="twitter:title" content="ShahZaib Ali - Full Stack Developer & Creative Coder" />
-    <meta property="twitter:description" content="Professional Full Stack Developer specializing in React, Node.js, Next.js, and modern web technologies." />
+    <meta property="twitter:title" content="Shahzaib Ali - Full Stack Developer & Creative Coder" />
+    <meta property="twitter:description" content="Shahzaib Ali is a professional Full Stack Developer specializing in React, Node.js, Next.js, and modern web technologies." />
     <meta property="twitter:image" content="https://shahzaibali.online/profile.jpg" />
-
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#3B82F6" />
-    <meta name="msapplication-TileColor" content="#3B82F6" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="ShahZaib Ali" />
+    <meta property="twitter:image:alt" content="Shahzaib Ali - Full Stack Developer Profile Picture" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://shahzaibali.online/" />
+
+    <!-- DNS Prefetch & Preconnect for Performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/profile.jpg" as="image" type="image/jpeg" />
+    <link rel="preload" href="/src/main.jsx" as="script" type="module" />
+    <link rel="preload" href="/src/index.css" as="style" />
 
     <!-- Favicon Configuration -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -47,20 +74,22 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Structured Data -->
+    <!-- Structured Data for Person -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "ShahZaib Ali",
+            "name": "Shahzaib Ali",
             "jobTitle": "Full Stack Developer",
-            "description": "Professional Full Stack Developer specializing in React, Node.js, Next.js, and modern web technologies.",
+            "description": "Shahzaib Ali is a professional Full Stack Developer specializing in React, Node.js, Next.js, and modern web technologies.",
             "url": "https://shahzaibali.online/",
-            "image": "https://shahzaibali.online/profile.jpg",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://shahzaibali.online/profile.jpg",
+                "width": 400,
+                "height": 400,
+                "caption": "Shahzaib Ali - Full Stack Developer"
+            },
             "sameAs": [
                 "https://github.com/shahzaibali",
                 "https://linkedin.com/in/shahzaibali"
@@ -72,9 +101,77 @@
                 "JavaScript",
                 "TypeScript",
                 "Full Stack Development",
-                "Web Development"
-            ]
+                "Web Development",
+                "Frontend Development",
+                "Backend Development"
+            ],
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Freelance"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Pakistan"
+            },
+            "alumniOf": {
+                "@type": "Organization",
+                "name": "Full Stack Development"
+            }
         }
+    </script>
+
+    <!-- Structured Data for Portfolio Website -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Shahzaib Ali Portfolio",
+            "url": "https://shahzaibali.online/",
+            "description": "Professional portfolio of Shahzaib Ali showcasing web development projects and skills",
+            "author": {
+                "@type": "Person",
+                "name": "Shahzaib Ali"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://shahzaibali.online/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
+    <!-- Structured Data for Profile Image -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "contentUrl": "https://shahzaibali.online/profile.jpg",
+            "name": "Shahzaib Ali - Full Stack Developer",
+            "description": "Professional headshot of Shahzaib Ali, a Full Stack Developer",
+            "width": 400,
+            "height": 400,
+            "thumbnail": "https://shahzaibali.online/profile.jpg",
+            "representativeOfPage": true,
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "creator": {
+                "@type": "Person",
+                "name": "Shahzaib Ali"
+            }
+        }
+    </script>
+
+    <!-- Performance Monitoring -->
+    <script>
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            if ('performance' in window) {
+                const perfData = performance.getEntriesByType('navigation')[0];
+                if (perfData) {
+                    console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                    console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+                }
+            }
+        });
     </script>
 </head>
 
